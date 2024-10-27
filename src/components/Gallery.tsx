@@ -1,12 +1,4 @@
-function Profile() {
-  return (
-    <img
-      className="rounded-full"
-      src="https://i.pravatar.cc/100?img=4"
-      alt="Katherine Johnson"
-    />
-  );
-}
+import Profile from "./Profile";
 
 export default function Gallery() {
   return (
