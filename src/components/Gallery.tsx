@@ -3,16 +3,19 @@ import Profile from "./Profile";
 
 const scientists: Person[] = [
   {
+    id: 1,
     name: "Aklilu Lemma",
     imageId: 4,
     gender: "male",
   },
   {
+    id: 2,
     name: "Lin Lanying",
     imageId: 10,
     gender: "female",
   },
   {
+    id: 3,
     name: "Ada Lovelace",
     imageId: 69,
     gender: "male",
@@ -28,9 +31,9 @@ export default function Gallery() {
     <section className="p-5">
       <h1>Amazing scientists</h1>
       <div className="flex">
-        <Profile person={scientists[0]} />
-        <Profile person={scientists[1]} />
-        <Profile person={scientists[2]} />
+        {scientists.map((person) => (
+          <Profile key={person.id} person={person} />
+        ))}
       </div>
     </section>
   );
